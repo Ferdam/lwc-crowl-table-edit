@@ -1,5 +1,5 @@
 /**
- * Mock Data Generator for ExcelLikeTable component
+ * Mock Data Generator for CrowlTable component
  * Use this for local testing and Lightning Component Preview
  */
 

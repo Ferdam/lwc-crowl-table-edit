@@ -3,14 +3,14 @@ import { generateMockTableData } from './mockDataGenerator';
 
 // Uncomment these imports when deploying to org with Apex
 // import { wire } from 'lwc';
-// import getTableData from '@salesforce/apex/ExcelLikeTableController.getTableData';
+// import getTableData from '@salesforce/apex/CrowlTableController.getTableData';
 
 const SEARCH_DEBOUNCE_MS = 300;
 const VIRTUAL_SCROLL_THRESHOLD = 500;
 const VIRTUAL_SCROLL_BUFFER = 20;
 const ROW_HEIGHT = 32; // Approximate row height in pixels
 
-export default class ExcelLikeTable extends LightningElement {
+export default class CrowlTable extends LightningElement {
     // Public API properties
     @api recordId;
     @api useApex = false; // Set to true to load data from Apex
@@ -784,6 +784,6 @@ export default class ExcelLikeTable extends LightningElement {
 
     // Utility to get table CSS classes
     get tableClasses() {
-        return 'slds-table slds-table_bordered slds-table_cell-buffer excel-table';
+        return 'slds-table slds-table_bordered slds-table_cell-buffer crowl-table';
     }
 }

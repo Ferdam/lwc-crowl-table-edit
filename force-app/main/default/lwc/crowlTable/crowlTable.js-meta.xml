@@ -2,8 +2,8 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>65.0</apiVersion>
     <isExposed>true</isExposed>
-    <masterLabel>Excel Like Table</masterLabel>
-    <description>An Excel-like editable table component with filtering, scoping, and bulk editing capabilities</description>
+    <masterLabel>Crowl Table</masterLabel>
+    <description>A Crowl Table editable table component with filtering, scoping, and bulk editing capabilities</description>
     <targets>
         <target>lightning__RecordPage</target>
         <target>lightning__AppPage</target>

@@ -6,7 +6,7 @@
 }
 
 /* Table base styles */
-.excel-table {
+.crowl-table {
   width: auto;
   min-width: 100%;
   border-collapse: collapse;
@@ -14,14 +14,14 @@
 }
 
 /* Make columns fit content */
-.excel-table th,
-.excel-table td {
+.crowl-table th,
+.crowl-table td {
   width: auto;
   white-space: nowrap;
 }
 
 /* Sticky header */
-.excel-table thead {
+.crowl-table thead {
   position: sticky;
   top: 0;
   z-index: 1;
@@ -94,12 +94,12 @@ td.slds-is-edited {
 }
 
 /* Row hover */
-.excel-table tbody tr:hover {
+.crowl-table tbody tr:hover {
   background-color: var(--slds-g-color-neutral-base-95, #f3f3f3);
 }
 
 /* Row selected state */
-.excel-table tbody tr.slds-is-selected {
+.crowl-table tbody tr.slds-is-selected {
   background-color: var(--slds-g-color-brand-base-95, #eef4ff);
 }
 
@@ -183,7 +183,7 @@ td[data-type="date"] .cell-value {
     overflow: visible;
   }
 
-  .excel-table thead {
+  .crowl-table thead {
     position: static;
   }
 }

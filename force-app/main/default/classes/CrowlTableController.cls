@@ -1,9 +1,9 @@
 /**
- * @description Controller for the ExcelLikeTable LWC component.
+ * @description Controller for the CrowlTable LWC component.
  *              Provides methods to retrieve table data with column metadata.
  * @author Generated
  */
-public with sharing class ExcelLikeTableController {
+public with sharing class CrowlTableController {
 
     /**
      * @description Retrieves table data with column metadata for a given record context.
