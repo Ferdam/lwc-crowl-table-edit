@@ -7,8 +7,17 @@
 
 /* Table base styles */
 .excel-table {
-  width: 100%;
+  width: auto;
+  min-width: 100%;
   border-collapse: collapse;
+  table-layout: auto;
+}
+
+/* Make columns fit content */
+.excel-table th,
+.excel-table td {
+  width: auto;
+  white-space: nowrap;
 }
 
 /* Sticky header */
@@ -23,7 +32,6 @@
 .column-header {
   cursor: pointer;
   user-select: none;
-  min-width: 120px;
 }
 
 .column-header:hover {

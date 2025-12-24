@@ -663,6 +663,10 @@ export default class ExcelLikeTable extends LightningElement {
         this.headerEditValue = null;
     }
 
+    handleHeaderEditCancel() {
+        this.cancelHeaderEdit();
+    }
+
     // Event Handlers - Cell Edit
     handleCellChange(event) {
         const rowId = event.currentTarget.dataset.rowId;
