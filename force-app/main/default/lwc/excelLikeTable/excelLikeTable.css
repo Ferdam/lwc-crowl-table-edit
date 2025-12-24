@@ -38,6 +38,14 @@
   padding-left: 0.5rem !important;
 }
 
+.cell-checkbox-input {
+  padding-left: 0.5rem;
+}
+
+.cell-inner-content {
+  padding-left: 0rem;
+}
+
 /* Header edit container */
 .header-edit-container {
   display: flex;

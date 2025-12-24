@@ -269,6 +269,7 @@ export default class ExcelLikeTable extends LightningElement {
                     }))
                     : [];
 
+                const isBoolean = col.dataType === 'boolean';
                 return {
                     fieldApi: col.field_api,
                     value: cellValue,
@@ -282,7 +283,8 @@ export default class ExcelLikeTable extends LightningElement {
                     isNumber: col.dataType === 'number',
                     isPicklist: col.dataType === 'picklist',
                     isDate: col.dataType === 'date',
-                    isBoolean: col.dataType === 'boolean'
+                    isBoolean: isBoolean,
+                    isNotBoolean: !isBoolean
                 };
             })
         }));
