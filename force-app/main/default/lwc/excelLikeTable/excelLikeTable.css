@@ -1,190 +1,191 @@
 /* Main container */
 .table-container {
-    overflow-x: auto;
-    max-height: 600px;
-    overflow-y: auto;
+  overflow-x: auto;
+  max-height: 600px;
+  overflow-y: auto;
 }
 
 /* Table base styles */
 .excel-table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 /* Sticky header */
 .excel-table thead {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background-color: var(--slds-g-color-neutral-base-95, #f3f3f3);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--slds-g-color-neutral-base-95, #f3f3f3);
 }
 
 /* Column header styles */
 .column-header {
-    cursor: pointer;
-    user-select: none;
-    min-width: 120px;
+  cursor: pointer;
+  user-select: none;
+  min-width: 120px;
 }
 
 .column-header:hover {
-    background-color: var(--slds-g-color-neutral-base-90, #e5e5e5);
+  background-color: var(--slds-g-color-neutral-base-90, #e5e5e5);
 }
 
 /* Checkbox column */
 .checkbox-column {
-    width: 40px;
+  /* width: 40px;
     min-width: 40px;
-    max-width: 40px;
+    max-width: 40px; */
+  padding-left: 0.5rem !important;
 }
 
 /* Header edit container */
 .header-edit-container {
-    display: flex;
-    align-items: center;
-    padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
 }
 
 .header-edit-input {
-    flex: 1;
-    min-width: 80px;
+  flex: 1;
+  min-width: 80px;
 }
 
 /* Cell styles */
 .cell-value {
-    display: block;
-    padding: 0.25rem 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  display: block;
+  padding: 0.25rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .cell-input {
-    width: 100%;
-    box-sizing: border-box;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Edited cell indicator */
 td.slds-is-edited {
-    background-color: var(--slds-g-color-warning-base-90, #fffbea) !important;
-    border-left: 3px solid var(--slds-g-color-warning-base-50, #fe9339) !important;
+  background-color: var(--slds-g-color-warning-base-90, #fffbea) !important;
+  border-left: 3px solid var(--slds-g-color-warning-base-50, #fe9339) !important;
 }
 
 /* Focus states */
 .cell-input:focus,
 .header-edit-input:focus {
-    outline: 2px solid var(--slds-g-color-brand-base-50, #0176d3);
-    outline-offset: -2px;
+  outline: 2px solid var(--slds-g-color-brand-base-50, #0176d3);
+  outline-offset: -2px;
 }
 
 /* Row hover */
 .excel-table tbody tr:hover {
-    background-color: var(--slds-g-color-neutral-base-95, #f3f3f3);
+  background-color: var(--slds-g-color-neutral-base-95, #f3f3f3);
 }
 
 /* Row selected state */
 .excel-table tbody tr.slds-is-selected {
-    background-color: var(--slds-g-color-brand-base-95, #eef4ff);
+  background-color: var(--slds-g-color-brand-base-95, #eef4ff);
 }
 
 /* Loading spinner container */
 .slds-spinner_container {
-    min-height: 200px;
+  min-height: 200px;
 }
 
 /* Button group adjustments */
 .slds-button-group {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 0.25rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
 }
 
 /* Badge for hidden rows */
 .slds-badge {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /* Search input icon positioning */
 .slds-input-has-icon {
-    position: relative;
+  position: relative;
 }
 
 .slds-input-has-icon .slds-input__icon_left {
-    left: 0.75rem;
+  left: 0.75rem;
 }
 
 .slds-input-has-icon .slds-input__icon_right {
-    right: 0.75rem;
+  right: 0.75rem;
 }
 
 .slds-input-has-icon .slds-input {
-    padding-left: 2rem;
-    padding-right: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /* Ensure select elements match input sizing */
 select.slds-select {
-    height: 1.875rem;
-    font-size: 0.8125rem;
+  height: 1.875rem;
+  font-size: 0.8125rem;
 }
 
 /* Boolean display styling */
 .cell-value {
-    text-align: center;
+  text-align: center;
 }
 
 td:not(.checkbox-column) .cell-value {
-    text-align: left;
+  text-align: left;
 }
 
 /* Date and number alignment */
 td[data-type="number"] .cell-value,
 td[data-type="date"] .cell-value {
-    text-align: right;
+  text-align: right;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .slds-button-group {
-        flex-direction: column;
-        width: 100%;
-    }
+  .slds-button-group {
+    flex-direction: column;
+    width: 100%;
+  }
 
-    .slds-button-group .slds-button {
-        width: 100%;
-        margin-bottom: 0.25rem;
-    }
+  .slds-button-group .slds-button {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
 }
 
 /* Print styles */
 @media print {
-    .slds-card__header {
-        display: none;
-    }
+  .slds-card__header {
+    display: none;
+  }
 
-    .table-container {
-        max-height: none;
-        overflow: visible;
-    }
+  .table-container {
+    max-height: none;
+    overflow: visible;
+  }
 
-    .excel-table thead {
-        position: static;
-    }
+  .excel-table thead {
+    position: static;
+  }
 }
 
 /* Accessibility - high contrast mode support */
 @media (prefers-contrast: high) {
-    td.slds-is-edited {
-        border-left-width: 4px;
-    }
+  td.slds-is-edited {
+    border-left-width: 4px;
+  }
 
-    .column-header:hover {
-        outline: 2px solid currentColor;
-    }
+  .column-header:hover {
+    outline: 2px solid currentColor;
+  }
 }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-    * {
-        transition: none !important;
-    }
+  * {
+    transition: none !important;
+  }
 }

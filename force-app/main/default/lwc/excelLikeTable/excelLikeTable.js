@@ -257,8 +257,10 @@ export default class ExcelLikeTable extends LightningElement {
         return rows.map(row => ({
             ...row,
             _isSelected: this.selectedRowIds.has(row.Id),
+            _rowCheckboxId: `row-checkbox-${row.Id}`,
             _cells: this.columns.map(col => {
                 const cellValue = row[col.field_api];
+                const cellKey = `${row.Id}_${col.field_api}`;
                 // Pre-compute picklist options with selected state
                 const picklistOptions = col.picklistValues
                     ? col.picklistValues.map(opt => ({
@@ -273,8 +275,9 @@ export default class ExcelLikeTable extends LightningElement {
                     displayValue: this.formatDisplayValue(cellValue, col.dataType),
                     dataType: col.dataType,
                     picklistOptions: picklistOptions,
-                    isEdited: this.editedCells.has(`${row.Id}_${col.field_api}`),
-                    cellKey: `${row.Id}_${col.field_api}`,
+                    isEdited: this.editedCells.has(cellKey),
+                    cellKey: cellKey,
+                    cellBooleanId: `cell-bool-${cellKey}`,
                     isText: col.dataType === 'text',
                     isNumber: col.dataType === 'number',
                     isPicklist: col.dataType === 'picklist',
@@ -292,6 +295,7 @@ export default class ExcelLikeTable extends LightningElement {
                 ...col,
                 isEditing: isEditing,
                 isNotEditing: !isEditing,
+                headerBooleanId: `header-bool-${col.field_api}`,
                 isText: col.dataType === 'text',
                 isNumber: col.dataType === 'number',
                 isPicklist: col.dataType === 'picklist',

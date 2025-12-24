@@ -85,7 +85,7 @@
                         <tr class="slds-line-height_reset">
                             <!-- Checkbox column header -->
                             <th class="slds-text-align_center checkbox-column" scope="col">
-                                <div class="slds-th__action">
+                                <div class="">
                                     <span class="slds-checkbox">
                                         <input type="checkbox" id="select-all-checkbox" checked={selectAllChecked}
                                             indeterminate={selectAllIndeterminate} onchange={handleSelectAll}>
@@ -155,12 +155,11 @@
                                             <!-- Boolean checkbox -->
                                             <template lwc:if={col.isBoolean}>
                                                 <span class="slds-checkbox">
-                                                    <input type="checkbox" id="header-bool-{col.field_api}"
+                                                    <input type="checkbox" id={col.headerBooleanId}
                                                         data-header-input={col.field_api} data-field-api={col.field_api}
                                                         checked={headerEditValue} onchange={handleHeaderEditChange}
                                                         onkeydown={handleHeaderEditKeydown}>
-                                                    <label class="slds-checkbox__label"
-                                                        for="header-bool-{col.field_api}">
+                                                    <label class="slds-checkbox__label" for={col.headerBooleanId}>
                                                         <span class="slds-checkbox_faux"></span>
                                                     </label>
                                                 </span>
@@ -191,9 +190,9 @@
                                 <!-- Row checkbox -->
                                 <td class="slds-text-align_center checkbox-column">
                                     <span class="slds-checkbox">
-                                        <input type="checkbox" id="row-checkbox-{row.Id}" data-row-id={row.Id}
+                                        <input type="checkbox" id={row._rowCheckboxId} data-row-id={row.Id}
                                             checked={row._isSelected} onchange={handleRowSelect}>
-                                        <label class="slds-checkbox__label" for="row-checkbox-{row.Id}">
+                                        <label class="slds-checkbox__label" for={row._rowCheckboxId}>
                                             <span class="slds-checkbox_faux"></span>
                                             <span class="slds-form-element__label slds-assistive-text">Select row</span>
                                         </label>
@@ -255,11 +254,10 @@
                                             <!-- Boolean checkbox -->
                                             <template lwc:if={cell.isBoolean}>
                                                 <span class="slds-checkbox">
-                                                    <input type="checkbox" id="cell-bool-{cell.cellKey}"
-                                                        data-row-id={row.Id} data-field-api={cell.fieldApi}
-                                                        checked={cell.value} onchange={handleCellChange}
-                                                        onkeydown={handleCellKeydown}>
-                                                    <label class="slds-checkbox__label" for="cell-bool-{cell.cellKey}">
+                                                    <input type="checkbox" id={cell.cellBooleanId} data-row-id={row.Id}
+                                                        data-field-api={cell.fieldApi} checked={cell.value}
+                                                        onchange={handleCellChange} onkeydown={handleCellKeydown}>
+                                                    <label class="slds-checkbox__label" for={cell.cellBooleanId}>
                                                         <span class="slds-checkbox_faux"></span>
                                                     </label>
                                                 </span>
